@@ -25,7 +25,7 @@ RUN /bin/sh -c '$JBOSS_HOME/bin/standalone.sh &' && \
   rm -rf /tmp/postgresql-*.jar
 
 
-ADD bin/applicationPetstore.war /opt/jboss/wildfly/standalone/deployments/
+ADD ./target/applicationPetstore.war /opt/jboss/wildfly/standalone/deployments/
 
 RUN chown -f jboss:0 /opt/jboss/wildfly/standalone/deployments/applicationPetstore.war
 RUN chmod -R 777 /opt/jboss/wildfly/standalone
